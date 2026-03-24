@@ -1,0 +1,162 @@
+site_name: Voltricx
+site_description: A modern, high-performance Lavalink wrapper for discord.py — built for speed, reliability, and developer joy.
+site_url: https://voltricx.dev
+site_author: JustNixx & Dipendra-creator
+copyright: Copyright &copy; 2026 JustNixx & Dipendra-creator &mdash; MIT License
+repo_name: RevvLabs/voltricx
+repo_url: https://github.com/RevvLabs/voltricx
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+#  custom_dir: overrides
+
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    - announce.dismiss
+
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      permalink_title: Anchor link to this section
+      toc_depth: 3
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  generator: false
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/RevvLabs/voltricx
+      name: GitHub
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/WPwJVZx4qu
+      name: Discord Support Server
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/voltricx/
+      name: PyPI
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they are searching for. With your consent, you are helping us to
+      make our documentation better.
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Configuration: getting-started/configuration.md
+    - Lavalink Setup: getting-started/lavalink-setup.md
+  - Guide:
+    - Connecting Nodes: guide/nodes.md
+    - Playback Control: guide/playback.md
+    - Queue Management: guide/queue.md
+    - Audio Filters: guide/filters.md
+    - AutoPlay & Recommendations: guide/autoplay.md
+    - Events: guide/events.md
+    - HyperCache: guide/caching.md
+    - Error Handling: guide/errors.md
+  - API Reference:
+    - Pool: api-reference/pool.md
+    - Node: api-reference/node.md
+    - Player: api-reference/player.md
+    - Queue: api-reference/queue.md
+    - Filters: api-reference/filters.md
+    - Playable & Playlist: api-reference/tracks.md
+    - Exceptions: api-reference/exceptions.md
+    - Enums: api-reference/enums.md
+    - Events: api-reference/events.md
+    - HyperCache: api-reference/hypercache.md
+    - Type Definitions: api-reference/typings.md
+  - Examples:
+    - Basic Music Bot: examples/basic-bot.md
+    - Full Featured Bot: examples/full-bot.md
+    - Slash Commands Bot: examples/slash-commands.md
+  - Changelog: changelog.md

@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voltricx"
+dynamic = ["version"]
+description = "A modern, simple, and powerful Lavalink wrapper for discord.py."
+authors = [
+    { name = "@JustNixx" },
+    { name = "@Dipendra-creator" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "discord.py>=2.0.0",
+    "pydantic>=2.0.0",
+    "aiohttp>=3.8.0",
+    "yarl>=1.9.0",
+    "python-dotenv>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.3.0",
+    "pyright>=1.1.300",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "pre-commit>=3.6.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/RevvLabs/voltricx"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["voltricx*"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+exclude = ["voltricx/_version.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
+ignore = [
+    "E501",   # line too long — handled by formatter
+    "UP007",  # use X | Y for Union — already done; suppress for Annotated[] edge cases
+]
+# Allow F401 on re-export modules (__init__.py, typings/__init__.py)
+per-file-ignores = { "voltricx/__init__.py" = ["F401"], "voltricx/typings/__init__.py" = ["F401", "F403"] }
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.setuptools_scm]
+version_file = "voltricx/_version.py"

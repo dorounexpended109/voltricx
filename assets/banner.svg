@@ -1,0 +1,175 @@
+<svg viewBox="0 0 1200 300" width="1200" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"   stop-color="#130d24"/>
+      <stop offset="100%" stop-color="#07070e"/>
+    </radialGradient>
+    <radialGradient id="orb-l" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#7c3aed" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb-r" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#5b21b6" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#5b21b6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="top-glow" cx="50%" cy="0%" r="55%">
+      <stop offset="0%"   stop-color="#7c3aed" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#07070e" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M 56 0 L 0 0 0 56" fill="none" stroke="#7c3aed" stroke-width="0.6" stroke-opacity="0.06"/>
+    </pattern>
+    <radialGradient id="gm" cx="50%" cy="50%" r="55%">
+      <stop offset="20%" stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="grid-mask">
+      <rect width="1200" height="300" fill="url(#gm)"/>
+    </mask>
+    <linearGradient id="fade-b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="75%" stop-color="#07070e" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#07070e" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="#07070e" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#07070e" stop-opacity="0.65"/>
+    </radialGradient>
+    <filter id="blur-heavy"><feGaussianBlur stdDeviation="55"/></filter>
+  </defs>
+
+  <!-- Backgrounds -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#top-glow)"/>
+  <rect width="1200" height="300" fill="url(#grid)" mask="url(#grid-mask)"/>
+
+  <!-- Orbs -->
+  <ellipse cx="80" cy="170" rx="320" ry="260" fill="url(#orb-l)" filter="url(#blur-heavy)">
+    <animate attributeName="cx" values="80;130;70;80"    dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="170;130;190;170" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="1120" cy="190" rx="280" ry="240" fill="url(#orb-r)" filter="url(#blur-heavy)">
+    <animate attributeName="cx" values="1120;1070;1140;1120" dur="13s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="190;160;210;190"     dur="13s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Particles -->
+  <g>
+    <circle cx="55"   cy="42"  r="1.4" fill="#9d6eff" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.4s" repeatCount="indefinite"/><animate attributeName="cy" values="42;37;42" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="190"  cy="25"  r="1.0" fill="#c4b5fd" opacity="0.4"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="340"  cy="260" r="1.2" fill="#9d6eff" opacity="0.4"><animate attributeName="opacity" values="0.4;0.85;0.4" dur="2.0s" repeatCount="indefinite"/></circle>
+    <circle cx="500"  cy="20"  r="1.1" fill="#c4b5fd" opacity="0.35"><animate attributeName="opacity" values="0.35;0.8;0.35" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="650"  cy="272" r="1.3" fill="#7c3aed" opacity="0.45"><animate attributeName="opacity" values="0.45;0.9;0.45" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="770"  cy="32"  r="1.0" fill="#9d6eff" opacity="0.35"><animate attributeName="opacity" values="0.35;0.75;0.35" dur="2.9s" repeatCount="indefinite"/></circle>
+    <circle cx="890"  cy="262" r="1.4" fill="#c4b5fd" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="1030" cy="48"  r="1.1" fill="#9d6eff" opacity="0.35"><animate attributeName="opacity" values="0.35;0.8;0.35" dur="3.0s" repeatCount="indefinite"/></circle>
+    <circle cx="1155" cy="230" r="1.3" fill="#c4b5fd" opacity="0.3"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="960"  cy="20"  r="0.9" fill="#7c3aed" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.7s" repeatCount="indefinite"/></circle>
+    <line x1="55"  y1="42"  x2="190"  y2="25"  stroke="#9d6eff" stroke-width="0.5" stroke-opacity="0.10"/>
+    <line x1="890" y1="262" x2="1030" y2="48"  stroke="#c4b5fd" stroke-width="0.5" stroke-opacity="0.08"/>
+    <line x1="650" y1="272" x2="770"  y2="32"  stroke="#7c3aed" stroke-width="0.5" stroke-opacity="0.08"/>
+  </g>
+
+  <!-- ── TECH BADGES — bigger, bright white text ── -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.1s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="0,10" to="0,0" dur="0.6s" begin="0.1s" fill="freeze"/>
+
+    <!-- Badge 1 — accent -->
+    <g transform="translate(222,20)">
+      <rect width="156" height="32" rx="8" fill="#7c3aed" fill-opacity="0.22"/>
+      <rect width="156" height="32" rx="8" fill="none" stroke="#9d6eff" stroke-opacity="0.7" stroke-width="1.4"/>
+      <text x="78" y="21" text-anchor="middle"
+        font-family="'JetBrains Mono','Courier New',monospace"
+        font-size="12.5" font-weight="700" fill="#ffffff" letter-spacing="1.6">⚡ LAVALINK V4</text>
+    </g>
+
+    <!-- Badge 2 -->
+    <g transform="translate(390,20)">
+      <rect width="128" height="32" rx="8" fill="white" fill-opacity="0.06"/>
+      <rect width="128" height="32" rx="8" fill="none" stroke="white" stroke-opacity="0.22" stroke-width="1.2"/>
+      <text x="64" y="21" text-anchor="middle"
+        font-family="'JetBrains Mono','Courier New',monospace"
+        font-size="12.5" font-weight="600" fill="#ffffff" letter-spacing="1.6">PYTHON 3.12+</text>
+    </g>
+
+    <!-- Badge 3 -->
+    <g transform="translate(530,20)">
+      <rect width="148" height="32" rx="8" fill="white" fill-opacity="0.06"/>
+      <rect width="148" height="32" rx="8" fill="none" stroke="white" stroke-opacity="0.22" stroke-width="1.2"/>
+      <text x="74" y="21" text-anchor="middle"
+        font-family="'JetBrains Mono','Courier New',monospace"
+        font-size="12.5" font-weight="600" fill="#ffffff" letter-spacing="1.6">DISCORD.PY 2.0</text>
+    </g>
+
+    <!-- Badge 4 -->
+    <g transform="translate(690,20)">
+      <rect width="132" height="32" rx="8" fill="white" fill-opacity="0.06"/>
+      <rect width="132" height="32" rx="8" fill="none" stroke="white" stroke-opacity="0.22" stroke-width="1.2"/>
+      <text x="66" y="21" text-anchor="middle"
+        font-family="'JetBrains Mono','Courier New',monospace"
+        font-size="12.5" font-weight="600" fill="#ffffff" letter-spacing="1.6">PYDANTIC V2</text>
+    </g>
+
+    <!-- Badge 5 -->
+    <g transform="translate(834,20)">
+      <rect width="130" height="32" rx="8" fill="white" fill-opacity="0.06"/>
+      <rect width="130" height="32" rx="8" fill="none" stroke="white" stroke-opacity="0.22" stroke-width="1.2"/>
+      <text x="65" y="21" text-anchor="middle"
+        font-family="'JetBrains Mono','Courier New',monospace"
+        font-size="12.5" font-weight="600" fill="#ffffff" letter-spacing="1.6">ASYNC/AWAIT</text>
+    </g>
+  </g>
+
+  <!-- ── VOLTRICX — Poetsen One ── -->
+  <foreignObject x="0" y="60" width="1200" height="230">
+    <div xmlns="http://www.w3.org/1999/xhtml"
+      style="width:1200px;height:230px;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&amp;display=swap');
+        .vtx-title {
+          font-family: "Poetsen One", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 175px;
+          letter-spacing: -2px;
+          text-transform: uppercase;
+          line-height: 1;
+          background: linear-gradient(110deg,
+            #7c3aed 0%,
+            #7c3aed 40%,
+            #e8d8ff 50%,
+            #7c3aed 60%,
+            #7c3aed 100%);
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: shimmer 3.6s linear infinite;
+          filter: drop-shadow(0 0 55px rgba(124,58,237,0.5));
+          margin: 0; padding: 0;
+          user-select: none;
+          white-space: nowrap;
+        }
+        @keyframes shimmer {
+          from { background-position: 100% 0; }
+          to   { background-position: -100% 0; }
+        }
+        .vtx-wrap {
+          opacity: 0;
+          transform: translateY(20px);
+          animation: rise 0.8s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+        }
+        @keyframes rise {
+          to { opacity: 1; transform: translateY(0); }
+        }
+      </style>
+      <div class="vtx-wrap">
+        <span class="vtx-title">VOLTRICX</span>
+      </div>
+    </div>
+  </foreignObject>
+
+  <!-- Overlays -->
+  <rect width="1200" height="300" fill="url(#vignette)"/>
+  <rect width="1200" height="300" fill="url(#fade-b)"/>
+</svg>

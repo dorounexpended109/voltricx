@@ -1,0 +1,69 @@
+<svg class="space-logo" width="876" height="667" viewBox="0 0 876 667" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes nebula-shift {
+      0%   { filter: hue-rotate(0deg) brightness(1); }
+      50%  { filter: hue-rotate(30deg) brightness(1.3); }
+      100% { filter: hue-rotate(0deg) brightness(1); }
+    }
+    @keyframes star-twinkle {
+      0%,100%{ opacity:0.2; }
+      50%    { opacity:1; }
+    }
+    @keyframes data-stream {
+      0%   { stroke-dashoffset: 300; opacity:0; }
+      20%  { opacity: 0.8; }
+      80%  { opacity: 0.8; }
+      100% { stroke-dashoffset: 0; opacity: 0; }
+    }
+    @keyframes chromatic-ab {
+      0%,100% { transform: translate(0,0); }
+      25%     { transform: translate(1.5px,0); }
+      75%     { transform: translate(-1.5px,0); }
+    }
+    .space-logo { display: block; animation: nebula-shift 8s ease-in-out infinite; }
+  </style>
+  <defs>
+    <linearGradient id="s1" x1="52" y1="51" x2="876" y2="667" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e8ddff"/>
+      <stop offset="35%" stop-color="#9966ff"/>
+      <stop offset="70%" stop-color="#4422cc"/>
+      <stop offset="100%" stop-color="#220066"/>
+    </linearGradient>
+    <linearGradient id="s2" x1="824" y1="52" x2="100" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffccee"/>
+      <stop offset="40%" stop-color="#cc44aa"/>
+      <stop offset="100%" stop-color="#440033"/>
+    </linearGradient>
+    <linearGradient id="s3" x1="438" y1="51" x2="300" y2="608" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ccddff"/>
+      <stop offset="50%" stop-color="#6677ee"/>
+      <stop offset="100%" stop-color="#111055"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="80" r="1.5" fill="#9966ff" style="animation:star-twinkle 2.1s ease-in-out infinite;"/>
+  <circle cx="750" cy="60" r="1" fill="#cc44aa" style="animation:star-twinkle 3s ease-in-out infinite 0.5s;"/>
+  <circle cx="820" cy="180" r="2" fill="#ccbbff" style="animation:star-twinkle 1.8s ease-in-out infinite 1s;"/>
+  <circle cx="60" cy="400" r="1.5" fill="#9966ff" style="animation:star-twinkle 2.5s ease-in-out infinite 0.3s;"/>
+  <circle cx="830" cy="500" r="1" fill="#ffccee" style="animation:star-twinkle 3.2s ease-in-out infinite 0.8s;"/>
+  <circle cx="200" cy="600" r="1.5" fill="#aabbff" style="animation:star-twinkle 2.8s ease-in-out infinite 1.2s;"/>
+  <circle cx="680" cy="600" r="1" fill="#cc44aa" style="animation:star-twinkle 2s ease-in-out infinite 1.5s;"/>
+  <circle cx="400" cy="30" r="1" fill="#ffddcc" style="animation:star-twinkle 3.5s ease-in-out infinite 0.2s;"/>
+  <ellipse cx="438" cy="334" rx="370" ry="90" stroke="#6644bb" stroke-width="0.5" fill="none" opacity="0.25" transform="rotate(-20,438,334)"/>
+  <circle r="4" fill="#9966ff" opacity="0.8" style="animation:star-twinkle 1s linear infinite;">
+    <animateMotion dur="12s" repeatCount="indefinite">
+      <mpath href="#orbit-path"/>
+    </animateMotion>
+  </circle>
+  <path id="orbit-path" d="M 68 334 A 370 90 0 1 1 808 334 A 370 90 0 1 1 68 334" transform="rotate(-20,438,334)" fill="none"/>
+  <g style="animation:chromatic-ab 0.15s ease-in-out infinite;" opacity="0.4">
+    <path d="M285.83 294.944L438.33 607.944L588.33 296.944L720.83 198.944L689.33 262.944L743.526 212.039C788.259 170.023 816.553 113.44 823.33 52.444L758.83 110.444L721.369 144.13C703.367 160.318 684.213 175.177 664.058 188.59L552.33 262.944L437.83 501.444L320.83 262.944L213.83 188.444L111.83 107.444L52.8304 51.444L54.9501 65.7162C63.2899 121.871 90.42 173.54 131.911 212.288L188.83 265.444L155.83 200.944L285.83 294.944Z" fill="#ff44bb" opacity="0.35"/>
+  </g>
+  <path d="M285.83 294.944L438.33 607.944L588.33 296.944L720.83 198.944L689.33 262.944L743.526 212.039C788.259 170.023 816.553 113.44 823.33 52.444L758.83 110.444L721.369 144.13C703.367 160.318 684.213 175.177 664.058 188.59L552.33 262.944L437.83 501.444L320.83 262.944L213.83 188.444L111.83 107.444L52.8304 51.444L54.9501 65.7162C63.2899 121.871 90.42 173.54 131.911 212.288L188.83 265.444L155.83 200.944L285.83 294.944Z" fill="url(#s1)" opacity="0.92"/>
+  <path d="M285.83 294.944L438.33 607.944L588.33 296.944L720.83 198.944L689.33 262.944L743.526 212.039C788.259 170.023 816.553 113.44 823.33 52.444L758.83 110.444L721.369 144.13C703.367 160.318 684.213 175.177 664.058 188.59L552.33 262.944L437.83 501.444L320.83 262.944L213.83 188.444L111.83 107.444L52.8304 51.444L54.9501 65.7162C63.2899 121.871 90.42 173.54 131.911 212.288L188.83 265.444L155.83 200.944L285.83 294.944Z" fill="none" stroke="#aa88ff" stroke-width="2.5" stroke-dasharray="200 400" style="animation:data-stream 6s ease-in-out infinite;"/>
+  <path d="M306.107 156.52L436.927 429.062C437.291 429.819 438.369 429.818 438.731 429.061L569.059 156.513C569.225 156.165 569.576 155.944 569.961 155.944H602.761C603.492 155.944 603.976 156.704 603.667 157.367L569.83 229.944L644.609 176.602C644.754 176.499 644.869 176.358 644.941 176.196L673.905 111.352C674.201 110.69 673.717 109.944 672.992 109.944H541.457C541.074 109.944 540.724 110.163 540.557 110.508L438.237 321.574C437.871 322.328 436.796 322.325 436.435 321.569L335.602 110.513C335.436 110.165 335.085 109.944 334.7 109.944H200.921C200.184 109.944 199.701 110.713 200.02 111.377L230.721 175.217C230.793 175.366 230.901 175.495 231.034 175.592L305.83 229.944L269.549 157.872C269.217 157.212 269.69 156.432 270.429 156.422L305.192 155.953C305.581 155.947 305.938 156.169 306.107 156.52Z" fill="url(#s2)" opacity="0.92"/>
+  <path d="M306.107 156.52L436.927 429.062C437.291 429.819 438.369 429.818 438.731 429.061L569.059 156.513C569.225 156.165 569.576 155.944 569.961 155.944H602.761C603.492 155.944 603.976 156.704 603.667 157.367L569.83 229.944L644.609 176.602C644.754 176.499 644.869 176.358 644.941 176.196L673.905 111.352C674.201 110.69 673.717 109.944 672.992 109.944H541.457C541.074 109.944 540.724 110.163 540.557 110.508L438.237 321.574C437.871 322.328 436.796 322.325 436.435 321.569L335.602 110.513C335.436 110.165 335.085 109.944 334.7 109.944H200.921C200.184 109.944 199.701 110.713 200.02 111.377L230.721 175.217C230.793 175.366 230.901 175.495 231.034 175.592L305.83 229.944L269.549 157.872C269.217 157.212 269.69 156.432 270.429 156.422L305.192 155.953C305.581 155.947 305.938 156.169 306.107 156.52Z" fill="none" stroke="#dd88ff" stroke-width="2" stroke-dasharray="150 600" style="animation:data-stream 8s ease-in-out infinite 2s;"/>
+  <path d="M364.83 505.444L271.83 309.444L219.83 273.944L258.83 346.944L200.954 312.776C184.238 302.908 168.441 291.562 153.751 278.875L98.8304 231.444L104.162 246.702C128.308 315.812 182.325 370.353 251.199 395.166L290.83 409.444L364.83 505.444Z" fill="url(#s3)" opacity="0.92"/>
+  <path d="M511.83 505.444L604.83 309.444L656.83 273.944L617.83 346.944L675.707 312.776C692.422 302.908 708.22 291.562 722.91 278.875L777.83 231.444L772.499 246.702C748.352 315.812 694.336 370.353 625.462 395.166L585.83 409.444L511.83 505.444Z" fill="url(#s3)" opacity="0.92"/>
+  <path d="M364.83 505.444L271.83 309.444L219.83 273.944L258.83 346.944L200.954 312.776C184.238 302.908 168.441 291.562 153.751 278.875L98.8304 231.444L104.162 246.702C128.308 315.812 182.325 370.353 251.199 395.166L290.83 409.444L364.83 505.444Z" fill="none" stroke="#9988ee" stroke-width="2" stroke-dasharray="100 400" style="animation:data-stream 7s ease-in-out infinite 1s;"/>
+  <path d="M511.83 505.444L604.83 309.444L656.83 273.944L617.83 346.944L675.707 312.776C692.422 302.908 708.22 291.562 722.91 278.875L777.83 231.444L772.499 246.702C748.352 315.812 694.336 370.353 625.462 395.166L585.83 409.444L511.83 505.444Z" fill="none" stroke="#bb88dd" stroke-width="2" stroke-dasharray="100 400" style="animation:data-stream 7s ease-in-out infinite 3s;"/>
+</svg>
