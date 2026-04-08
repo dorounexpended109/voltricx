@@ -5,7 +5,7 @@ description: API reference for the Voltricx Player class.
 
 # `Player`
 
-<span class="vtx-version">v1.0.5</span>
+
 
 `Player` extends `discord.VoiceProtocol` and is the primary interface for controlling audio playback in a guild.
 

@@ -5,7 +5,7 @@ description: API reference for the HyperCache dual-tier caching system.
 
 # `HyperCache`
 
-<span class="vtx-version">v1.0.5</span>
+
 
 A dual-tier caching system combining an LRU query cache (L1) and an LFU track registry (L2) with frequency decay.
 

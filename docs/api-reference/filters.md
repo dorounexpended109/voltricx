@@ -5,7 +5,7 @@ description: API reference for Voltricx audio filter classes.
 
 # Filters
 
-<span class="vtx-version">v1.0.5</span>
+
 
 ## `Filters`
 

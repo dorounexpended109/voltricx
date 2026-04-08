@@ -5,7 +5,7 @@ description: API reference for all Voltricx exception classes.
 
 # Exceptions
 
-<span class="vtx-version">v1.0.5</span>
+
 
 All Voltricx exceptions inherit from `VoltricxException`, making it easy to catch them all with a single `except` block.
 

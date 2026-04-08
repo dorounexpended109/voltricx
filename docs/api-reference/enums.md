@@ -5,7 +5,7 @@ description: API reference for all Voltricx enumerations.
 
 # Enums
 
-<span class="vtx-version">v1.0.5</span>
+
 
 All enums in Voltricx inherit from both `str` and `Enum`, meaning you can compare them directly against strings.
 

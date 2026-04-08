@@ -5,7 +5,7 @@ description: Complete reference for all Voltricx events.
 
 # Events Reference
 
-<span class="vtx-version">v1.0.5</span>
+
 
 All events are dispatched via `discord.Client.dispatch()` and listened to with `@bot.event` or `@commands.Cog.listener()`.
 

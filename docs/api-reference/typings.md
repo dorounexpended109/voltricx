@@ -5,7 +5,7 @@ description: Pydantic models and type definitions used across Voltricx.
 
 # Type Definitions
 
-<span class="vtx-version">v1.0.5</span>
+
 
 Voltricx uses [Pydantic v2](https://docs.pydantic.dev/latest/) for all data models, providing automatic validation, serialisation, and IDE autocompletion.
 

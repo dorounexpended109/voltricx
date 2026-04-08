@@ -5,7 +5,7 @@ description: API reference for the Voltricx Node class.
 
 # `Node`
 
-<span class="vtx-version">v1.0.5</span>
+
 
 `Node` represents a single connection to a Lavalink server. It wraps both the REST API and WebSocket connection.
 

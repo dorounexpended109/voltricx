@@ -5,7 +5,7 @@ description: API reference for the Pool class — the central node manager.
 
 # `Pool`
 
-<span class="vtx-version">v1.0.5</span>
+
 
 The `Pool` is a **class-level singleton** that manages all Lavalink node connections, load balancing, failover, and the global HyperCache.
 

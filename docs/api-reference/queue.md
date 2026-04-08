@@ -5,7 +5,7 @@ description: API reference for the Voltricx Queue class.
 
 # `Queue`
 
-<span class="vtx-version">v1.0.5</span>
+
 
 `Queue` is a feature-rich, deque-backed track queue with support for loop modes, async waiting, history tracking, and direct index operations.
 

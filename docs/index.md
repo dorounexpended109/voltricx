@@ -23,7 +23,7 @@ hide:
 
     <div class="vtx-tech-badges vtx-animate-in">
       <span class="vtx-tech-badge vtx-tech-badge--accent">⚡ Lavalink v4</span>
-      <span class="vtx-tech-badge">Python 3.9+</span>
+      <span class="vtx-tech-badge">Python 3.12+</span>
       <span class="vtx-tech-badge">discord.py 2.0</span>
       <span class="vtx-tech-badge">Pydantic v2</span>
       <span class="vtx-tech-badge">async/await</span>
@@ -62,17 +62,6 @@ hide:
       </div>
     </div>
 
-    <div class="vtx-stats-row vtx-animate-in" style="margin-top: 2rem;">
-      <a href="https://github.com/RevvLabs/voltricx/stargazers">
-        <img src="https://img.shields.io/github/stars/RevvLabs/voltricx?style=flat-square&color=8c52ff" alt="Stars">
-      </a>
-      <a href="https://github.com/RevvLabs/voltricx/network/members">
-        <img src="https://img.shields.io/github/forks/RevvLabs/voltricx?style=flat-square&color=8c52ff" alt="Forks">
-      </a>
-      <a href="https://github.com/RevvLabs/voltricx/releases">
-        <img src="https://img.shields.io/github/v/release/RevvLabs/voltricx?style=flat-square&color=8c52ff" alt="Release">
-      </a>
-    </div>
 
   </div>
 

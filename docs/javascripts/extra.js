@@ -318,9 +318,19 @@ function initScrollReveal() {
    ══════════════════════════════════════════════════════════════════ */
 function animateCounters() {
   document.querySelectorAll("[data-target]").forEach(el => {
-    const target = parseFloat(el.getAttribute("data-target"));
+    const targetStr = el.getAttribute("data-target") || "0";
     const suffix = el.getAttribute("data-suffix") || "";
     const prefix = el.getAttribute("data-prefix") || "";
+
+    /* If it looks like a semantic version (e.g. "1.0.5"), just display it immediately */
+    if (targetStr.includes(".") && targetStr.split(".").length > 2) {
+      el.textContent = prefix + targetStr + suffix;
+      return;
+    }
+
+    const target = Number.parseFloat(targetStr);
+    if (Number.isNaN(target)) return;
+
     const decimals = target % 1 !== 0 ? 1 : 0;
     const dur = 1100;
     const start = performance.now();
@@ -329,7 +339,7 @@ function animateCounters() {
       const p = Math.min((now - start) / dur, 1);
       const e = 1 - Math.pow(1 - p, 3);
       const v = (e * target).toFixed(decimals);
-      el.textContent = prefix + parseFloat(v).toLocaleString() + suffix;
+      el.textContent = prefix + Number.parseFloat(v).toLocaleString() + suffix;
       if (p < 1) requestAnimationFrame(tick);
     })(start);
   });
@@ -444,11 +454,52 @@ function relocateFooterNav() {
   }
 }
 
+async function syncGithubStats() {
+  const repoUrl = "https://api.github.com/repos/RevvLabs/voltricx";
+  const relUrl = "https://api.github.com/repos/RevvLabs/voltricx/releases/latest";
+
+  try {
+    const [repoRes, relRes] = await Promise.all([
+      fetch(repoUrl),
+      fetch(relUrl)
+    ]);
+
+    if (repoRes.ok) {
+      const repoData = await repoRes.json();
+      const starEl = document.querySelector('.vtx-stat-item:nth-child(1) .vtx-stat-value');
+      const forkEl = document.querySelector('.vtx-stat-item:nth-child(3) .vtx-stat-value');
+      
+      if (starEl) starEl.setAttribute('data-target', repoData.stargazers_count);
+      if (forkEl) forkEl.setAttribute('data-target', repoData.forks_count);
+    }
+
+    if (relRes.ok) {
+      const relData = await relRes.json();
+      const verEl = document.querySelector('.vtx-stat-item:nth-child(5) .vtx-stat-value');
+      if (verEl) {
+        // Handle versions like 'v1.0.5' or '1.0.5'
+        const version = relData.tag_name.replace(/^v/, '');
+        verEl.setAttribute('data-target', version);
+        
+        // If version has more than one dot, animateCounters might need adjustment 
+        // but for now we'll set it as target.
+      }
+    }
+  } catch (err) {
+    console.error("Voltricx: Failed to fetch GitHub stats", err);
+  }
+}
+
 function observeStats() {
   const bar = document.querySelector(".vtx-stats-bar");
   if (!bar) return;
   const io = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) { animateCounters(); io.disconnect(); }
+    if (entries[0].isIntersecting) { 
+      syncGithubStats().then(() => {
+        animateCounters();
+      });
+      io.disconnect(); 
+    }
   }, { threshold: 0.4 });
   io.observe(bar);
 }

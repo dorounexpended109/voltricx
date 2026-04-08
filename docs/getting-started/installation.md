@@ -5,13 +5,13 @@ description: How to install Voltricx and its dependencies.
 
 # Installation
 
-Voltricx supports Python **3.9 and above** and Lavalink **v4.x**.
+Voltricx supports Python **3.12 and above** and Lavalink **v4.x**.
 
 ## Prerequisites
 
 Before installing Voltricx you will need:
 
-- **Python 3.9+** — [Download Python](https://www.python.org/downloads/)
+- **Python 3.12+** — [Download Python](https://www.python.org/downloads/)
 - **A running Lavalink server** — [Lavalink Setup Guide](lavalink-setup.md)
 - **discord.py 2.0+** — installed as a dependency automatically
 
@@ -75,7 +75,7 @@ After installing, verify everything works:
 
 ```python
 import voltricx
-print(voltricx.__version__)  # Should print: 1.0.5
+print(voltricx.__version__)
 ```
 
 ## Next Steps

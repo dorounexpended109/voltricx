@@ -5,7 +5,7 @@ description: API reference for Playable and Playlist track models.
 
 # `Playable` & `Playlist`
 
-<span class="vtx-version">v1.0.5</span>
+
 
 ## `Playable`
 
